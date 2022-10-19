@@ -301,6 +301,17 @@
         <param index="6">Empty</param>
         <param index="7">Empty</param>
       </entry>
+      <!-- Ascent Aerosystems Mavlink Commands -->
+      <entry value="48000" name="MAV_CMD_ASCENT_PAYLOAD" hasLocation="false" isDestination="false">
+        <description>Used to control payload attached to Ascent vehicle, command ID's can be found in complimentary document</description>
+        <param index="1" label="Command ID">Desired command for Ascent vehicle payload.</param>
+        <param index="2" label="Parameter 1">First input if appropriate for selected command.</param>
+        <param index="3" label="Parameter 2">First input if appropriate for selected command.</param>
+        <param index="4">Empty</param>
+        <param index="5">Empty</param>
+        <param index="6">Empty</param>
+        <param index="7">Empty</param>
+      </entry>
     </enum>
     <enum name="SCRIPTING_CMD">
       <entry value="0" name="SCRIPTING_CMD_REPL_START">
