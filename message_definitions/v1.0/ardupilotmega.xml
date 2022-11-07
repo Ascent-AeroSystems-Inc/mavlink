@@ -312,6 +312,26 @@
         <param index="6">Empty</param>
         <param index="7">Empty</param>
       </entry>
+      <entry value="48001" name="MAV_CMD_ASCENT_RID_HEALTH" hasLocation="false" isDestination="false">
+        <description>Used to report the health of the RID module</description>
+        <param index="1" label="Health">Health status of the Remote ID module</param>
+        <param index="2">Empty</param>
+        <param index="3">Empty</param>
+        <param index="4">Empty</param>
+        <param index="5">Empty</param>
+        <param index="6">Empty</param>
+        <param index="7">Empty</param>
+      </entry>
+      <entry value="48002" name="MAV_CMD_ASCENT_RID_GCS" hasLocation="false" isDestination="false">
+        <description>Used to report/retrieve the position of the GCS</description>
+        <param index="1" label="Lat">Latitude</param>
+        <param index="2" label="Lat">Longitude</param>
+        <param index="3" label="Lat">Altitude</param>
+        <param index="4">Empty</param>
+        <param index="5">Empty</param>
+        <param index="6">Empty</param>
+        <param index="7">Empty</param>
+      </entry>
     </enum>
     <enum name="SCRIPTING_CMD">
       <entry value="0" name="SCRIPTING_CMD_REPL_START">
@@ -1732,6 +1752,12 @@
       <field type="float" name="yaw" units="rad">Yaw angle</field>
       <field type="float" name="distance" units="m">Distance (uncorrected)</field>
       <field type="float" name="temperature" units="degC">Water temperature</field>
+    </message>
+    <message id="11060" name="ASCENT_REMOTE_ID_GCS_POS">
+      <description>Ascent Aerosystems Remote ID Health Packet</description>
+      <field type="int32_t" name="gcs_lat">Latitude of the operator.</field>
+      <field type="int32_t" name="gcs_lon">Longitude of the operator.</field>
+      <field type="uint16_t" name="gcs_alt_geo">Alt Geo of the operator</field>
     </message>
   </messages>
 </mavlink>
