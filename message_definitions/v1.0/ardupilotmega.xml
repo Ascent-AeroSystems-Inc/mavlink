@@ -1894,5 +1894,13 @@
       <field type="uint16_t[4]" name="rpm" units="rpm">RPM (eRPM).</field>
       <field type="uint16_t[4]" name="count">count of telemetry packets received (wraps at 65535).</field>
     </message>
+    <message id="11060" name="ASCENT_REMOTE_ID_GCS_DATA">
+      <description>Ascent Aerosystems Remote ID Health Packet</description>
+      <field type="int32_t" name="gcs_lat">Latitude of the operator.</field>
+      <field type="int32_t" name="gcs_lon">Longitude of the operator.</field>
+      <field type="uint16_t" name="gcs_alt_geo">Alt Geo of the operator</field>
+      <field type="uint32_t" name="gcs_timestamp_s">UTC timestamp w.r.t. 01/01/2019</field>
+      <field type="uint8_t" name="gcs_emergency">Operator declared emergency</field>
+    </message>
   </messages>
 </mavlink>
