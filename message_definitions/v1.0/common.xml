@@ -6326,6 +6326,16 @@
       <field type="uint8_t" name="estimator_type" enum="MAV_ESTIMATOR_TYPE">Type of estimator that is providing the odometry.</field>
       <field type="int8_t" name="quality" units="%" invalid="0">Optional odometry quality metric as a percentage. -1 = odometry has failed, 0 = unknown/unset quality, 1 = worst quality, 100 = best quality</field>
     </message>
+    <message id="334" name="CELLULAR_STATUS">
+      <description>Report current used cellular network status</description>
+      <field type="uint8_t" name="status">Cellular modem status</field>
+      <field type="uint8_t" name="failure_reason">Failure reason when status is FAILED</field>
+      <field type="uint8_t" name="type">Cellular network radio type: gsm, cdma, lte...</field>
+      <field type="uint8_t" name="quality">Signal quality in percent. If unknown, set to UINT8_MAX</field>
+      <field type="uint16_t" name="mcc">Mobile country code. If unknown, set to UINT16_MAX</field>
+      <field type="uint16_t" name="mnc">Mobile network code. If unknown, set to UINT16_MAX</field>
+      <field type="uint16_t" name="lac">Location area code. If unknown, set to 0</field>
+    </message>
     <message id="335" name="ISBD_LINK_STATUS">
       <description>Status of the Iridium SBD link.</description>
       <field type="uint64_t" name="timestamp" units="us">Timestamp (UNIX Epoch time or time since system boot). The receiving end can infer timestamp format (since 1.1.1970 or since system boot) by checking for the magnitude of the number.</field>
